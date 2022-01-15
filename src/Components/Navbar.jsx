@@ -9,8 +9,8 @@ const Navbar = () => {
        }
     }, [])
   return (
-    <nav className="navbar w-full shadow-sm bg-neutral text-neutral-content ">
-      <div className="container flex flex-wrap mx-auto">
+    <nav className="navbar max-w-none fixed z-50 top-0 bg-gradient-to-r from-violet-700 to-violet-900 border-b-2 border-opacity-20 border-gray-100 w-full shadow-lg bg-violet-600 text-neutral-content ">
+      <div className="container max-w-none sm:w-[95%] lg:w-[85%] flex flex-wrap mx-auto">
           <span class="text-xl font-bold">Navbar</span>
           <div class="md:hidden flex items-center ml-auto">
             <button class="btn btn-ghost" onClick={() => setMenu(!menu)}>
@@ -28,10 +28,10 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div class={`${menu ? "" : "hidden"} md:ml-auto justify-evenly items-center flex flex-col  md:flex-row w-full md:w-auto md:order-1`}>
-            <a class="w-full md:w-auto btn btn-ghost btn-sm rounded-btn">Home</a>
-              <a class="w-full md:w-auto btn btn-ghost btn-sm rounded-btn">daısyUI</a>
-              <a class="w-full md:w-auto btn btn-ghost btn-sm rounded-btn">Tailwind</a>
+          <div class={`${menu ? "" : "hidden"} absolute z-50 md:sticky top-[100%] left-0 bg-violet-600 lg:bg-transparent p-4  md:ml-auto justify-evenly items-center flex flex-col  md:flex-row w-full md:w-auto md:order-1`}>
+            <a href="#" class="w-full md:w-auto btn btn-ghost btn-sm rounded-btn">Home</a>
+              <a href="#" class="w-full md:w-auto btn btn-ghost btn-sm rounded-btn">daısyUI</a>
+              <a href="#" class="w-full md:w-auto btn btn-ghost btn-sm rounded-btn">Tailwind</a>
               </div>
         </div>
     </nav>
