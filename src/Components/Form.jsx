@@ -1,6 +1,14 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import banner from "../img/contactBanner.svg";
 const Form = () => {
+
+
+  
+  const autoHeight = (element) => {
+    
+    element.style.height = "1px";
+    element.style.height = (20+element.scrollHeight)+"px";
+  }
   return (
     <div className="form flex flex-row mx-auto w-[100%] max-w-none h-auto min-h-[75vh] justify-center align-center">
       <form action="" className="form-control items-start flex flex-row w-full justify-between xl:justify-evenly h-[fit-content]">
@@ -43,9 +51,11 @@ const Form = () => {
               <span class="label-text">Mail</span>
             </label>
             <textarea
+            id="message"
               type="text"
-              placeholder="mail"
-              class="textarea min-h-[100px] textarea-bordered"
+              placeholder="message"
+              onChange={() => autoHeight(document.getElementById("message"))}
+              className="textarea min-h-[100px] h-auto textarea-bordered"
             />
           </div>
           <button className="button mt-5">SEND</button>
