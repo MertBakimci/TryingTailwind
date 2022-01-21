@@ -8,10 +8,26 @@
   box-sizing: border-box;
 }
 
+.padding{
+ @apply pl-[15px] pr-[15px] md:pl-[50px] md:pr-[50px]
+}
 
+.inhidden {
+  display: block !important;
+}
+
+.button {
+  @apply btn btn-ghost btn-md  text-black bg-slate-200 btn-sm rounded-btn hover:bg-slate-400;
+}
+
+.text-5xl {
+  @apply text-2xl font-semibold md:text-4xl
+}
 
 body {
-  width: 100vw;
+  overflow-x: hidden;
+ min-height: 100vh;
+  min-width: 100vw;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

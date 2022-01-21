@@ -1,43 +1,57 @@
-import React from "react";
-import banner from "../img/formBanner.svg";
+import React, { useState } from "react";
+import banner from "../img/contactBanner.svg";
 const Form = () => {
   return (
-    <div className="mt-0 pt-4 pl-4 h-[100%] bg-violet-700 bg-gradient-to-r from-violet-700 to-violet-900 mx-auto w-full">
-      <div className="w-[100%] max-w-[1920px] relative h-full sm:w-[95%] lg:w-[85%] flex items-center  mx-auto">
-        <img className="w-[70%] max-w-[1200px] invisible  md:visible md:top-50 right-20 md:right-10 absolute bottom-0 mt-auto" src={banner} alt="" />
-        <div class="form-control  absolute top-20 left-0 lg:top-1/2 md:transform ml-0 bg-transparent  lg:-translate-y-1/2  z-20 w-full lg:mb-5 lg:ml-5 max-w-[700px] h-50 md:bg-violet-700 p-5  md:rounded-xl md:shadow-lg">
-          <div className="form-control flex flex-col md:flex-row md:gap-5">
-            <div className="w-full md:w1/2">
+    <div className="form flex flex-row mx-auto w-[100%] max-w-none h-auto min-h-[75vh] justify-center align-center">
+      <form action="" className="form-control items-start flex flex-row w-full justify-between xl:justify-evenly h-[fit-content]">
+        <div className="flex relative bottom-2 flex-col text-black bg-gray-300 w-full max-w-[550px] p-7 h-full rounded-b-[15px]  ">
+        <h1 className="text-5xl mb-2 font-semi text-gray-600">CONTACT</h1>
+          <div className="form-control w-full flex flex-col gap-0 md:flex-row md:gap-10">
+            <div class="form-control w-[100%]">
               <label class="label">
                 <span class="label-text">Name</span>
               </label>
-              <input type="text" placeholder="Name" class="input text-black ring-gray-100 bg-gray-100 appearance-none border border-violet-500 w-full" />
+              <input
+                type="text"
+                placeholder="name"
+                class="input input-white input-bordered"
+              />
             </div>
-            <div className="w-full md:w1/2">
+            <div class="form-control w-[100%]">
               <label class="label">
                 <span class="label-text">Surname</span>
               </label>
-              <input type="text" placeholder="Surname" class="input text-black ring-gray-100 bg-gray-100 appearance-none border border-violet-500 w-full" />
+              <input
+                type="text"
+                placeholder="surname"
+                class="input input-white input-bordered"
+              />
             </div>
           </div>
-          <div className="w-full">
+          <div class="form-control w-full">
             <label class="label">
-              <span class="label-text">Email</span>
+              <span class="label-text">Mail</span>
             </label>
-            <input type="text" placeholder="E-Mail" class="input text-black ring-gray-100 bg-gray-100 appearance-none border border-violet-500 w-full" />
+            <input
+              type="text"
+              placeholder="mail"
+              class="input input-white input-bordered"
+            />
           </div>
-          <div class="w-full">
+          <div class="form-control w-full">
             <label class="label">
-              <span class="label-text">Your bio</span>
+              <span class="label-text">Mail</span>
             </label>
             <textarea
-              class="textarea h-24 text-black  ring-gray-100 bg-gray-100 appearance-none border border-violet-500 textarea-bordered w-full"
-              placeholder="Bio"
-            ></textarea>
+              type="text"
+              placeholder="mail"
+              class="textarea min-h-[100px] textarea-bordered"
+            />
           </div>
-          <a href="mailto:bkmmert2004@gmail.com" class="btn w-full mt-5 bg-violet-600 border-500 border-violet-500 hover:border-violet-500 hover:bg-violet-800">Submit</a>
+          <button className="button mt-5">SEND</button>
         </div>
-      </div>
+        <img className="w-[100%] max-w-[475px] mt-[150px] hidden lg:block" src={banner} alt="" />
+      </form>
     </div>
   );
 };
